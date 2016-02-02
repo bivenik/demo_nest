@@ -118,22 +118,13 @@ public class ThermostatView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        //final int savedColor = paint.getColor();
-        if (!isEnabled()) {
-            //paint.setAlpha(100);
-        }
         float topPadding = height / SEGMENTS_COUNT;
         for (int i = 0; i <= SEGMENTS_COUNT; i++) {
             float startY = top + topPadding * i;
             canvas.drawLine(left, startY, left + width, startY + 2, paint);
         }
-        canvas.restore();
-        if (!isEnabled()) {
-            //paint.setColor(savedColor);
-        }
 
         if (isEnabled()) {
-            final int save = canvas.save();
 
             // current
             {
@@ -165,7 +156,6 @@ public class ThermostatView extends View {
                 float halfWidth = paintTarget.getStrokeWidth() / 2;
                 canvas.drawRect(left - getPaddingLeft(), startY - halfWidth, left + width + getPaddingRight(), startY + halfWidth, paintTarget);
             }
-            canvas.restoreToCount(save);
         }
     }
 
