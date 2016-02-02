@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#716D46</color>
+    <color name="colorPrimaryDark">#59573f</color>
+    <color name="colorAccent">#ff8800</color>
+
+    <color name="background">#403E3D</color>
+
+    <color name="text">#ffffff</color>
+    <color name="button_text">#414141</color>
+
+    <color name="thermostat_bars">@color/text</color>
+    <color name="thermostat_current">#D4C400</color>
+    <color name="thermostat_target_cool">#008E95</color>
+    <color name="thermostat_target_heat">#D46200</color>
+    <color name="temperature_color">#a7ffffff</color>
+    <color name="temperature_color_selected">@color/text</color>
+
+</resources>

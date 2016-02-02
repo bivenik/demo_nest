@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+def CLIENT_ID = 'NEST_CLIENT_ID'
+def CLIENT_SECRET = 'NEST_CLIENT_SECRET'
+def REDIRECT_URL = 'NEST_REDIRECT_URL'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.ibohdan.nest"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField 'String', CLIENT_ID, '"b8d19c0d-6e19-48db-940c-0ccc8acde189"'
+        buildConfigField 'String', CLIENT_SECRET, '"zua466GH77VqkpL7e2k0FK6lS"'
+        buildConfigField 'String', REDIRECT_URL, '"https://www.scnsoft.com/ibohdan/nest"'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+
+    apt 'com.bluelinelabs:logansquare-compiler:1.1.0'
+    compile 'com.bluelinelabs:logansquare:1.1.0'
+
+    apt "com.google.dagger:dagger-compiler:2.0"
+    compile 'com.google.dagger:dagger:2.0'
+
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.jakewharton.timber:timber:2.7.1'
+}

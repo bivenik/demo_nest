@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Nest</string>
+
+    <string name="temperature">%1$.1f°</string>
+    <string name="humidity">Humidity: %1$d%%</string>
+    <string name="off">OFF</string>
+
+    <string name="mode_cool">Cool</string>
+    <string name="mode_heat">Heat</string>
+    <string name="mode_heat_cool">Heat &amp; cool</string>
+    <string name="mode_off">Off</string>
+    <string name="home">HOME</string>
+    <string name="away">AWAY</string>
+    <string name="logout">logout</string>
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+
+</resources>

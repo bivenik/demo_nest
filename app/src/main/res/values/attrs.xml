@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- THERMOSTAT VIEW -->
+    <eat-comment/>
+    <declare-styleable name="ThermostatView">
+        <attr name="barsColor" format="reference|color" />
+        <attr name="currentColor" format="reference|color" />
+        <attr name="targetColor" format="reference|color" />
+        <attr name="barsWidth" format="dimension" />
+    </declare-styleable>
+
+</resources>
